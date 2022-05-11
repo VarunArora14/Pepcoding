@@ -1,0 +1,39 @@
+Arrays
+
+One technique useful for arrays for finding the maximum subarray is sliding window technique where we keep moving right
+based on some conditions for finding the max subarray till now.One special case for sliding window is the Kadane's akgo where we do -
+```
+Initialize:
+    max_so_far = INT_MIN
+    max_ending_here = 0
+
+Loop for each element of the array
+  (a) max_ending_here = max_ending_here + a[i]
+  (b) if(max_so_far < max_ending_here)
+            max_so_far = max_ending_here
+  (c) if(max_ending_here < 0)
+            max_ending_here = 0
+return max_so_far
+```
+
+Sliding window has O(N*k) and O(N) ways. O(N*k) way is -
+
+Iterate the array from 0 to n-k and in inner loop go from 0 to k. Maintain the max in inner loop and check if max_val < a[i+j] where max=a[i]
+
+O(N) way -
+Maintain a deque having at top the largest ele in the k subarray. In first while loop, remove the elements where a[i] > Q.back() as they are 
+useless and at last push the a[i] in queue at the end.
+For rest ele, go from k to n, 
+the Q.front() has the max value till now as we have been removing the smaller values than a[i] before. Remove the ele out of window by 
+while(!Q.empty() && a[i] >=a[Q.back()]) 
+  Q.pop_back() (Note - we are storing indices in Q and not ele)
+Push the curr ele by Q.push_back(i) 
+Outside the loop print the max of last window by cout<<a[Q.front()]
+
+Another way like queue using 2 stacks mplementing queue methods using stacks stack1 and stack2.
+While pushing, push into stack2 maintaining the top of stack2 as max till now. Pop from stack1 and if empty, push all ele from stack2 to stack1
+upadting the max too. This is implementation of queue using 2 stacks.
+To find the max of the queue(same as both stack), take top of both stack as maximum which is the max of the queue.
+Now, this technique can be used to slide window and get maximum while sliding window by 1 index delete the last one, insert the new one and then 
+take a maximum of both stack.
+

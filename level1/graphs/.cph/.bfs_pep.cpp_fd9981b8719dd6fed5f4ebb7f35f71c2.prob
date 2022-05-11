@@ -1,0 +1,1 @@
+{"name":"Local: bfs_pep","url":"d:\\VS Code\\cpp\\pepcoding\\level1\\graphs\\bfs_pep.cpp","tests":[{"id":1648233774338,"input":"7 8\n0 1\n0 3\n1 2\n2 3\n3 4\n4 5\n4 6\n5 6\n2","output":""}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"d:\\VS Code\\cpp\\pepcoding\\level1\\graphs\\bfs_pep.cpp","group":"local","local":true}

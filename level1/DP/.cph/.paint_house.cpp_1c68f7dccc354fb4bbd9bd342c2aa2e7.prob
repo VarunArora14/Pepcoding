@@ -1,0 +1,1 @@
+{"name":"Local: paint_house","url":"d:\\VS Code\\cpp\\pepcoding\\level1\\DP\\paint_house.cpp","tests":[{"id":1647885801331,"input":"4\n1 5 7\n5 8 4\n3 2 9\n1 2 4","output":""}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"d:\\VS Code\\cpp\\pepcoding\\level1\\DP\\paint_house.cpp","group":"local","local":true}
