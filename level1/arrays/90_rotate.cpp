@@ -61,4 +61,15 @@ int main()
 It can be easily solved using transpose of a matrix where change the rows of a mtrix with columns.
 There is one problem that we may reverse 2 elements twice so traverse either the left triangle
 or right triangl of the array
+
+Find the transpose of the matrix by swapping nums[i][j] with nums[j][i] such that -
+1 2 3      1 4 7
+4 5 6  =>  2 5 8
+7 8 9      3 6 9
+
+Now for each row, reverse it such that the answer is the 90 degree rotated matrix
+
+3 6 9
+2 5 8
+1 4 7
 */
