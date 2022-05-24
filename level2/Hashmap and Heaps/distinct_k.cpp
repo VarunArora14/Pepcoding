@@ -17,7 +17,7 @@ int main()
   map<int, int> m1;
 
   // first acquire the k ele as 0 to k-1 brings the kth ele as k-1
-  for (int i = 0; i < k - 1; i++)
+  for (int i = 0; i <= k - 2; i++)
     m1[a[i]]++;
 
   // now from k-1(kth ele) to i<n, insert the next ele,
@@ -30,6 +30,7 @@ int main()
       m1.erase(a[j]);
     else
       m1[a[j]]--;
+    // above is release
   }
 
   for (auto i : ans)
@@ -42,4 +43,27 @@ the kth element we do acquire, push and release where we first acquire a new ele
 
 5 3
 1 3 7 2 9
+
+Another wy using while loop is as follows -
+int i=0, j=-1;
+// push k-1 ele in map
+while(i<=k-2)
+{
+  m1[a[i]]++;
+}
+
+while(i<n)
+{
+  // acquire the ele and increase i first
+  i++;
+  m1[a[i]]++;
+
+  ans.push_back(m1.size()); // work
+
+  // release
+  j++; // increase the j before releasing as it points to prev num
+  if(m1[a[j]]==1)
+    m1.erase(a[j]);
+  else m1[a[j]]--;
+}
 */
