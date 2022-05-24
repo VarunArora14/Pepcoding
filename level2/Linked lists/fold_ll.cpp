@@ -59,6 +59,11 @@ void print(node *head)
   cout << "\n";
 }
 
+node* fold_ll(node* head)
+{
+
+}
+
 int main()
 {
   node *head = nullptr;
@@ -78,5 +83,6 @@ Consider 1->2->3->4->5->6 changes to
 
 For 1->2->3->4->5 ans is 1->5->2->4->3
 
-we have to use extra space as without that we can't do it easily. without space,
+We have to use extra space here and we can do so by using stack. We traverse the LL and push the elements onto the stack such that at the end, the
+last element on top of stack and while entering we note the number of elements in LL too
 */
