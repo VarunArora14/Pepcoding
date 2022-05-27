@@ -118,7 +118,7 @@ void hash_sol(string str1, string str2)
       // collect ans first which lead to break of the loop
       string temp_ans = str1.substr(i, j); // i at 0 and j at point where we did last count++ for desired
 
-      if (ans == "" || temp_ans.length() > ans.length())
+      if (ans == "" || temp_ans.length() < ans.length())
         ans = temp_ans;
 
       // now check if by removing the starting ele
